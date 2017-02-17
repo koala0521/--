@@ -260,9 +260,6 @@ title span{
 	z-index: 1;
 	display: none;
 }
-.nav li:hover ul{
-	display: block;
-}
 
 .second-nav li a{
 	line-height: 24px;
