@@ -1,0 +1,106 @@
+.main-content{
+	/*background: url(../img/goods/content-bg.jpg) repeat-y;*/
+}
+#head .all .nav{
+	display: none;
+}
+
+#head .down .all:hover .nav{
+	display: block;
+}
+#goodspage .head{
+	height: 150px;
+
+}
+#goodspage .head .top{
+	height: 124px;
+	background: url(../img/goods/head-bg.jpg) repeat-y;	
+}
+#goodspage .head nav{
+	height: 26px;
+	background: url(../img/goods/nav-bg.jpg) repeat-y;
+}
+#goodspage .head .top h2{
+	width: 456px;
+	height: 0;
+	padding-top: 124px;
+	overflow: hidden;
+	background: url(../img/goods/h2-img.jpg) no-repeat;
+}
+#goodspage .head .top .shoucang{
+	width: 408px;
+	height: 124px;
+	margin-right: 233px;
+}
+#goodspage .head nav .width{
+	padding-top: 1px;
+}
+ .head nav .width a{
+	line-height: 24px;
+	padding: 0 14px 0 13px;
+	color: #051620;
+}
+ .head nav .width a:hover{
+	color: #C81623;
+}
+#goodspage .head nav .width .first{
+	padding: 0 30px;
+	color: #fff;
+	background: #fe0000;
+}
+#goodspage .head nav .width .last{
+	background: #041316;
+	color: #fff;
+	box-shadow: 1px 1px  #f5ff0c;
+	
+}
+#goodspage .goods-info{
+	
+}
+#goodspage .goods-info .img1{
+
+}
+#goodspage .bottom{
+	height: 266px;
+	padding-top: 20px;
+	background: #000000;
+}
+#goodspage .bottom .bottom-info{
+	width: 990px;
+	margin: 0 auto;
+}
+#goodspage .bottom .bottom-info .top{
+	height: 68px;
+	background: url(../img/goods/bottom-bg.jpg) repeat-x;
+}
+#goodspage .bottom .bottom-info .top .right{
+margin: 19px 60px 0 0;
+}
+#goodspage .bottom .bottom-info .top .right a{
+padding: 0 12px;
+height: 32px;
+line-height: 32px;
+}
+.bottom-info .top .right .click{
+	background: #fdd71e;
+	color: #6a150e;
+	margin-right: 8px;
+}
+.bottom-info .top .right .goback{
+	background: #6d6d6d;
+	color: #cfcfcf;
+}
+#goodspage .bottom .bottom-info .down{
+	height: 165px;
+	padding: 17px 0 0 11px;
+	background: url(../img/goods/down-bg.jpg) no-repeat;
+}
+#goodspage .bottom .bottom-info .down .down01{
+	margin-right: 36px;
+}
+#goodspage .bottom .bottom-info .down .down02{
+	margin-right: 32px;
+}
+#goodspage .bottom .bottom-info .down .down03{
+	margin-right: 28px;
+}

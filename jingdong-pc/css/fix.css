@@ -1,0 +1,174 @@
+.clearfix{
+	zoom: 1;
+}
+
+/*.width{
+	width: 990px;
+	margin: 0 auto;
+}
+.searched{
+	width: 428px;
+}*/
+#submit{
+	margin: 0;
+	text-align: center;
+	width: 76px;
+	padding: 0 10px;
+	border: inherit;
+}
+
+#top .sel{
+	overflow: hidden;
+	margin-top: 3px;	
+}
+#top .content span{
+	vertical-align: top;	
+}
+
+.into .bg{
+	margin-right: 6px;
+}
+.shop-car .icon{
+	height: 15px;
+	margin-right: 6px;
+	background: url(../img/topIcon.png) no-repeat 0 -17px;
+}
+.shop-car .icon2{
+	margin-top: 8px;
+	height: 9px;
+	background: url(../img/topIcon.png) no-repeat 0 -34px;
+}
+.nav .list{
+	display: inline-block;
+	vertical-align: top;
+}
+.other-life li{
+	overflow: hidden;
+}
+.banner-img .turn-left,.banner-img .turn-right{
+	filter: alpha(opacity:30);
+}
+.banner-img .hover:hover{
+	filter: alpha(opacity:60);	
+}
+
+.all a{
+	width: 200px;
+	height: 44px;
+	padding-left: 10px;
+	line-height: 44px;
+	background: #b1191a;
+	color: #FFFFFF;	
+}
+/*
+  	↓ like-list区域上方红色滑动边框最小高度问题
+ */
+.like-list li .red-border{
+overflow: hidden;
+}
+
+
+/*
+  	↓  JDspecial-content right 下面的 第二个li里面 dt内容宽度超出问题
+ 
+ */
+.left-list-title .item{
+	word-spacing: -8px;
+}
+
+/* 楼层内容透明层兼容问题 */
+.left-top .left-top-opacity,.left-top .opacity,.floor3-left .f3-L-T .opacity{
+	filter: alpha(opacity:40);	
+}
+.floor6-left .left-top .opacity,.floor10-left .top .opacity{
+	filter: alpha(opacity:40);	
+}
+
+
+
+
+.font li{
+	vertical-align: top;
+}
+
+/*  透明层定位出现偏差问题  跳过父级的 position:relative; 相对于父级的父级（该父级没有相对定位）进行定位，  */
+
+.floors-left .left-top,.floor1-left .left-top {
+	display: inline-block;
+	zoom: 1;
+}
+
+/*  透明层内文字和图片在一行时，文字垂直不居中问题  */
+.left-top .left-top-font a span {
+	display: inline-block;
+	line-height: 26px;
+	height: 26px;
+}
+
+.font li a span{
+	display: inline-block;
+	line-height: 26px;
+	height: 26px;
+	
+}
+
+/* ↓ 最小高度问题  */
+.center-top .floats,.right-item .item-ad .item-turn{
+	overflow: hidden;
+}
+.floats .floats-box a{
+	margin-right: 6px;
+}
+
+
+.floor10-right .content li{
+	vertical-align: top;
+}
+
+
+
+#foot .fixed{
+	position: absolute;
+	right:0;
+	top:expression(eval(document.documentElement.scrollTop + 100));
+
+}
+
+.fixed-floor{
+	position: absolute;
+	left: 6px;
+	top:expression(eval(document.documentElement.scrollTop + 100));	
+}
+
+
+/* ↓ list 页面兼容性处理     ↓ */
+
+
+
+.listmain .stroe .into-stroe{
+	display: inline-block;
+	overflow: hidden;
+
+}
+
+
+.goods-ad .ad-box .ad-opacity{
+	filter: alpha(opacity:40);
+}
+
+
+
+ .turn-box .box-right .page-text span{
+ 	vertical-align: top;
+ 	zoom: 1;
+ }
+.turn-box .box-right .page-text .sub-bottom{
+	vertical-align: top;
+}
+.goods-turn .turn-box .box-right .text{
+	vertical-align: top;
+}
+
+.listmain .down-search label,#re-text,#re-search{
+	vertical-align: middle;
+}
