@@ -1,0 +1,1 @@
+Please open with chome or firfox,Because the part of the work using the syntax is ES6.
