@@ -20,16 +20,12 @@ var data = {
 		{
 			id:2999,
 			pid:0,
-			title:"我的视频"
+			title:"淘宝"
 		},
 		{
 			id:29000,
 			pid:0,
-<<<<<<< HEAD
-			title:"我的照片"
-=======
-			title:"我的视频"
->>>>>>> fc4427d1e0c95ceaa0589f06c3458ac2ff9219b0
+			title:"我的电影"
 		},
 		{
 			id:23333,
@@ -39,11 +35,7 @@ var data = {
 		{
 			id:244444,
 			pid:0,
-<<<<<<< HEAD
-			title:"我的收藏"
-=======
-			title:"我的小说"
->>>>>>> fc4427d1e0c95ceaa0589f06c3458ac2ff9219b0
+			title:"京东"
 		},
 		{
 			id:3,
