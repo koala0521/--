@@ -20,12 +20,12 @@ var data = {
 		{
 			id:2999,
 			pid:0,
-			title:"淘宝"
+			title:"我的视频"
 		},
 		{
 			id:29000,
 			pid:0,
-			title:"22"
+			title:"我的照片"
 		},
 		{
 			id:23333,
@@ -35,7 +35,7 @@ var data = {
 		{
 			id:244444,
 			pid:0,
-			title:"京东"
+			title:"我的收藏"
 		},
 		{
 			id:3,
