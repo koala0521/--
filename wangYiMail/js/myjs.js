@@ -51,13 +51,16 @@ function addScroll (obj,fnUp,fnDown) {	//为obj添加鼠标滚轮事件处理函
 	obj.addEventListener("DOMMouseScroll",fn);
 	
 	function fn (e) {//只要滚动滚轮了，就会触发fn
+		
 		var e = e || event;
 		if(e.wheelDelta){//chrome
+			
 			e.wheelDelta<0? fnDown(): fnUp();
 			return false;
 		}
 		if(e.detail){//firefox
-			e.detail>0? fnDown(): fnUp();
+			
+			e.detail>0 ? fnDown(): fnUp();
 			e.preventDefault();
 		}
 	}
@@ -157,6 +160,7 @@ function over(ev){
 	var ev = ev || event;
 	var target = ev.target;
 	if(target.nodeName === "A"){
+		
 		var span = target.parentNode.getElementsByTagName("span")[0];
 		span.innerHTML = target.parentNode.dataset.tooltip;
 		span.style.display = "block";
@@ -164,9 +168,11 @@ function over(ev){
 }
 	
 function out(ev){	
+	
 	var ev = ev || event;	
 	var target = ev.target;
-	if(target.nodeName === "A"){		
+	if(target.nodeName === "A"){	
+		
 		var span = target.parentNode.getElementsByTagName("span")[0];
 		span.style.display = "none";
 	}
