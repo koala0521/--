@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+		
+		<script src="js/data.js" ></script>			
+		<script src="js/tools.js" > </script>		
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script src="js/jquery-3.1.1.js" ></script>
+		<script src="js/bootstrap.min.js" ></script>
+		<!-- 模板引擎 -->
+		<script src="js/template-native.js" ></script>
+
+		<script>
+			var dpr = 1 / window.devicePixelRatio;
+		    document.write('<meta name="viewport" content="width=device-width,user-scalable=no,,initial-scale='+dpr+',minimum-scale='+dpr+',maximum-scale='+dpr+'" />');
+
+		    var fz = document.documentElement.clientWidth / 50;
+		    
+		    document.getElementsByTagName('html')[0].style.fontSize = fz + 'px';
+		    
+		    document.addEventListener('touchstart',function(ev){
+		    	
+		       if( ev.cancelable ){
+		       	
+		       		ev.preventDefault();
+		       }
+		       
+		    },{passive:false});
+
+		    
+		</script>
+	</head>
+	
+	<body>
+		<section class="warp" >
+			<div id="state" >
+				<div class="xinhao" >
+					
+					<span class="number"></span>
+					<span class="number"></span>
+					<span class="number"></span>
+					<span class="number"></span>
+					<span class="number"></span>
+					<span class="yunying" >中国移动</span>
+					
+				</div>
+				
+				<div class="time" ></div>
+				
+				<div class="dianLiang" >
+					<span>100%</span>
+					<span class="icon" ></span>
+				</div>
+			</div> 
+			<div id="lock">
+				<div class="time">
+					<h2></h2>
+					<div></div>
+				</div>
+				<div class="open">&gt;&gt;滑动来解锁 </div>
+				
+			</div>
+			<section class="page">
+
+			</section>
+						
+			<div class="fixed" >
+				<div class="icon" >
+					<span class="active" ></span>
+					<span></span>
+				</div>
+				<ul class="fixed_items" >
+					<li class="app" >
+						<div class="icon1" ></div>
+						<span class="title" >信息</span>
+					</li>
+					<li class="app" >
+						<div class="icon2" ></div>
+						<span class="title" >相机</span>
+					</li>
+					<li class="app" >
+						<div class="icon3" ></div>
+						<span class="title" >相册</span>
+					</li>
+					<li class="app" >
+						<div class="icon4" ></div>
+						<span class="title" >计算器</span>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="head">
+				<div class="info">
+					<div class="search">
+						<input type="text" placeholder="搜索" />
+						<span></span>						
+					</div>
+
+					<ul>
+						<li class="noinfo" >没有通知</li>
+					</ul>
+					
+				</div>
+				<div class="back" ></div>
+			</div>
+			<div id="foot">
+				<ul class="items" >
+					<li >
+						<span class="glyphicon glyphicon-plane" ></span>
+						
+					</li>
+					<li>
+						<span class="glyphicon glyphicon-volume-off" ></span>
+					</li>
+					<li class="active" >
+						<span class="glyphicon glyphicon-sort" ></span>
+					</li>
+					<li>
+						<span class="glyphicon glyphicon-cog" ></span>
+					</li>
+					<li>
+						<span class="glyphicon glyphicon-camera" ></span>
+					</li>
+				</ul>
+				<div class="sound" >
+					<span class="low glyphicon glyphicon-asterisk soundIcon" ></span>
+					<div class="line_down" >
+						<span class="line_up" ></span>
+						<span class="soundBtn" ></span>
+					</div>
+					<span class="high glyphicon glyphicon-asterisk soundIcon"></span>
+				</div>
+				<div class="air" >
+					<div class="active" ><span class="glyphicon glyphicon-blackboard" ></span> AirPlay 镜像</div>
+					<div><span class="glyphicon glyphicon-record" ></span> AirDorp: 关闭</div>
+				</div>
+				<div class="night" >
+					<div class="" >
+						<span class="glyphicon glyphicon-certificate" ></span> NightShift: 关闭
+					</div>
+				</div>
+			</div>
+			<div class="appContent" >
+				<div class="album info" >
+					
+					<ul class="album_list" >
+
+
+					</ul>
+					
+					<div class="bigImgWarp">
+						<div class="bigImg" >
+					
+						</div>
+						
+					</div>
+					<div class="titie">
+						<span class="delet glyphicon glyphicon-trash" ></span>
+						<span class="back glyphicon glyphicon-chevron-left" ></span>
+						<p>已选择0项</p>
+						<span class="select" data-onoff = "false" >选择</span>
+					</div>
+					<div class="footer"></div>
+				</div>
+				<div class="musicPlayer info" >
+					<audio id="audio">
+						    <source src="" type="audio/ogg">
+						    <source src="" type="audio/mpeg">
+						    <source src="" type="audio/wav">
+						您的浏览器不支持，音乐播放器，请使用体验更好的浏览器打开，推荐谷歌、火狐等浏览器。
+					</audio>
+					<h3 class="mTitle" >
+						我的音乐
+						<span class="toPlay glyphicon glyphicon-align-right" ></span>
+					</h3>
+					<div class="mList" >
+						<ul class="musicList">
+
+
+						</ul>						
+						
+					</div>
+					<ul class="foot">
+						<!--<li><span></span><span></span></li>
+						<li><span></span><span></span></li>
+						<li><span></span><span></span></li>
+						<li><span></span><span></span></li>-->
+					</ul>
+					<div class="palyerPage">
+						<h3>
+							<span class="backMlist glyphicon glyphicon-chevron-left" ></span>
+							<div class="song" >歌名</div>
+							<div class="singer" >歌手</div>
+							<span class="share glyphicon glyphicon-share" ></span>
+						</h3>
+						<div class="mPlay">
+							<img class="" src="img/musicImg/player.png"/>
+							<span class="jidian" ></span>
+						</div>
+						<div class="songImg">							
+							<span class="bg" >
+								<img src="img/musicImg/music.jpg"/>
+							</span>
+						</div>
+						<div class="musicFoot">
+							<div class="icons" >
+								<span class="heart active glyphicon glyphicon-heart" ></span>
+								<span class="download glyphicon glyphicon-download-alt"></span>
+								<span class="comment glyphicon glyphicon-comment" ></span>
+								<span class="option glyphicon glyphicon-option-vertical"></span>
+							</div>
+							<div class="times" >
+								<div class="currentTime fl" >00:00</div>
+								<div class="lines">
+									<div class="lastTime" ></div>
+									<span class="touchIcon" ></span>
+								</div>
+								<div class="allTime fr">00:00</div>
+							</div>
+							<div class="ctrl">
+								<div class="moShi" >
+									<span class=" glyphicon glyphicon-retweet" ></span>
+								</div>
+								<div class="proveSong">
+									<span class="glyphicon glyphicon-step-backward" ></span>
+								</div>
+								<div class="onoff">
+									<span class="glyphicon glyphicon-play" ></span>
+								</div>
+								<div class="nextSong">
+									<span class=" glyphicon glyphicon-step-forward" ></span>
+								</div>
+								<div class="jiLu">
+									<span class="glyphicon glyphicon-list" ></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="noInfo info" >app正在建设中...</div>								
+				<div class="menu" >					
+					<span class="glyphicon glyphicon-remove-sign iconBack" ></span>
+				</div>
+				
+			</div>
+			<div class="head_show" ></div>
+			<div class="foot_show" ></div>
+			<div id="mask" ></div>
+			
+		</section>
+		
+		<script type="text/html"  id="pageHtml" >
+			
+			<%for (var i = 0; i < data.length; i++) {%>
+				
+				<ul class="page1_list <%= i===0? "active":"" %>" data-page = <%= data[i].page %> >
+					
+					<%for (var j = 0; j < data[i].list.length; j++) {%>
+						<li class="app" data-index = "<%= data[i].list[j].index %>" data-candel= "<%= data[i].list[j].canDel %>" >
+							<img src= <%= data[i].list[j].src %> />
+							<span class="title"><%= data[i].list[j].title %></span>
+							
+							<% if(data[i].list[j].canDel ==="true"){ %>	
+								
+								<span class="del glyphicon glyphicon-remove" ></span>								
+							<%}%>
+							<div class="content" > </div>
+								
+						</li>				
+					<%}%>	
+				</ul>
+			<%}%> 	
+		</script>
+		
+		<script type="text/html" id="photosHtml" > 
+			<%for (var i = 0; i < data.length; i++) {%>
+				
+				<li data-index = <%= i %> >
+					<img src= <%= data[i] %> />							
+					<div class="mask">
+						<span class="checkbox glyphicon glyphicon-ok" ></span>	
+					</div>
+				</li>
+			
+			<%}%> 
+		</script>
+		
+		<script type="text/html" id="musicHtml" >
+			
+			<%for (var i = 0; i < data.length; i++) {%>
+			
+				<li>
+					<h3 class="mTitle" ><%= data[i].song %></h3>
+					<p class="mSinger"><%= data[i].singer %></p>
+					<span class="button glyphicon glyphicon-option-horizontal" ></span>
+					<span class="playIcon glyphicon glyphicon-volume-up" ></span>
+				</li>
+			
+			<%}%> 
+			
+		</script>
+	
+		<script>
+		
+		//渲染数据
+		
+			;(function(){
+				
+				//锁屏时间
+				var arrDay = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];	
+
+				var time = new Date();
+				
+				var hour = time.getHours() < 10 ? "0"+time.getHours() : time.getHours();
+				
+				var minit = time.getMinutes() < 10 ? "0"+ time.getMinutes() : time.getMinutes();
+				 
+				var timeObj = {
+					
+					hour:hour,
+					minit:minit,
+					month:time.getMonth(),
+					dates:time.getDate(),
+					day:time.getDay()
+					
+				}
+				
+				$("#lock .time h2").eq(0).html(timeObj.hour +":"+timeObj.minit );
+							
+				$("#lock .time div").eq(0).html((timeObj.month + 1)+"月"+timeObj.dates +"日 "+ arrDay[timeObj.day] );
+				
+				//顶部状态栏时间
+				$("#state .time").eq(0).html(timeObj.hour +":"+timeObj.minit );
+				
+				setInterval(function(){
+					
+					var time = new Date();
+					
+					var hour = time.getHours()<10?"0"+time.getHours():time.getHours();
+					
+					var minit = time.getMinutes() < 10? "0"+ time.getMinutes():time.getMinutes();
+					
+					if( timeObj.minit !== minit ){
+						
+						timeObj.minit = minit;
+						
+						$("#lock .time h2").eq(0).html(timeObj.hour +":"+ timeObj.minit );
+						$("#state .time").eq(0).html(timeObj.hour +":"+timeObj.minit );
+						
+					}else{
+						
+						return;
+					}
+										
+					if( timeObj.hour !== hour ){
+						
+						timeObj.hour = hour;
+						$("#lock .time h2").eq(0).html(timeObj.hour +":"+ timeObj.minit );
+						$("#state .time").eq(0).html(timeObj.hour +":"+timeObj.minit );
+					}
+					
+					if( timeObj.month !== time.getMonth() || timeObj.dates !== time.getDate() || timeObj.day !== time.getDay() ){
+						
+						if( timeObj.month !== time.getMonth() ){
+							timeObj.month = time.getMonth();
+						}
+						
+						if( timeObj.dates !== time.getDate() ){
+							timeObj.dates = time.getDate();
+						}
+						
+						if( timeObj.day !== time.getDay() ){
+							timeObj.day = time.getDay();
+						}						
+						
+						$("#lock .time div").eq(0).html((timeObj.month + 1)+"月"+timeObj.dates+"日 "+ arrDay[ timeObj.day ] );							
+						
+					}					
+				},1000)				
+				
+				//设置page的width
+				$(".page").eq(0).css("width",data.length*100+"vh");
+				
+				//生成主屏app图标	
+				var obj = { data:data };
+				
+				var html =  template('pageHtml', obj);
+				
+				$(".page").eq(0).html(html);
+
+				// 生成页数对应的小圆圈
+				var str = "";
+				
+				data.forEach(function(item,index){
+					
+					if( index === 0 ){
+						
+						str += "<span class = 'active'></span>";
+						
+					}else{
+						
+						str += "<span></span>";
+					}
+					
+				})
+				
+				$(".fixed .icon").html( str );
+				
+				// 生成相册列表				
+				var photos = { data : photosData };
+
+				$(".appContent .album_list").html( template('photosHtml', photos) ); 
+				
+				
+				$(".bigImg").css("width",photosData.length*100 +"vw");
+				
+				//相册大图
+				var imgStr = "";
+				
+				for (var i = 0; i < photosData.length; i++) {
+					
+					imgStr += "<div><img src='"+ photosData[i] +"' /></div>";
+				}
+
+				$(".bigImg").html( imgStr );
+				
+				
+				//生成播放器列表
+				
+				var musicList = { data : musicData };
+				
+				$(".musicPlayer .mList ul.musicList").html( template('musicHtml', musicList) );
+				
+				
+			})();
+	
+		</script>
+		
+				<!-- isScroll -->
+		<script src="js/iscroll.js" > </script>
+				<!-- 运动函数封装 -->
+		<script src="js/m.Tween.js" > </script>
+				<!-- 多指操作封装（需配合运动函数） -->
+		<script src="js/gesture.js" ></script>
+				<!-- 模拟鼠标抬起事件封装 -->			
+		<script src="js/touchup.js" ></script>			
+				<!-- 可自定义的弹框封装 -->
+		<script src="js/dialog.js" ></script>
+				<!-- 主要交互 -->
+		<script src="js/myJs.js" ></script>
+				<!-- 音乐播放器相关交互 -->
+		<script src="js/musicPlayer.js" ></script>
+		
+		
+	</body>
+
+</html>

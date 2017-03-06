@@ -1,0 +1,56 @@
+body .dialog{
+	
+	width: 33.333333rem;
+	height: 16.666666rem;
+	background: #F5F8FA;
+	z-index: 100;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -16.666666rem;
+	margin-top: -8.333333rem;
+	border-radius: 0.8rem;
+	padding: 1rem;
+	padding-bottom: 4.666666rem;
+	box-sizing: border-box;
+	/*display: none;*/	
+}
+.dialog h3{
+	
+	height: 4rem;
+	line-height: 4rem;
+	color: #000;
+	margin: 0;
+	font: 800 2rem/4rem arial;
+	text-align: center;
+	margin-bottom: 0.666666rem;
+}
+
+.dialog .content{
+	
+	line-height: 2.5rem;
+	font-size: 1.8rem;
+	font-family: arial;
+	color: #000000;
+	text-align: center;
+}
+.dialog .cancel,.dialog .ok{
+	
+	width: 6.666666rem;
+	height: 3.333333rem;
+	border-radius: 0.666666rem;
+	line-height: 3.333333rem;
+	font-size: 2rem;
+	text-align: center;
+	position: absolute;
+	bottom: 1.333333rem;	
+}
+.dialog .cancel{
+	
+	left: 3.333333rem;
+	color: limegreen;
+}
+.dialog .ok {
+	right: 3.333333rem;
+	color: red;
+}

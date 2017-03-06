@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>css3实现iPhone滑动解锁渐变效果</title>
+
+<style>
+p {
+	width: 50%;
+	margin: 0 auto;
+	line-height: 50px;
+	font-size: 50px;
+	text-align: center;
+	-webkit-background-clip: text;    /*按文字裁剪*/
+	-webkit-text-fill-color: transparent;    /*文字的颜色使用背景色*/
+	background-color: #19385c;    /*设置一个背景色*/
+	background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);        /*设置渐变的背景，按对角线渐变*/
+	background-blend-mode: hard-light;    /*设置背景为混合模式下的强光模式*/
+	background-size: 200%;
+	-webkit-animation: shine 4s infinite;    /*给背景添加动画改变位置*/
+	color: aquamarine;
+}
+ @-webkit-keyframes shine {
+	 from {
+	background-position: 100%;
+	}
+	to {
+		background-position: 0;
+	}
+}
+
+#box{
+	
+	width: 200px;
+	position: absolute;
+	left: 100px;
+	top: 50px;
+	
+}
+#box ul{
+	
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#box ul li{
+	width: 100%;
+	height: 500px;
+	background: #1300CC;
+	border: 1px solid #C7254E;
+}
+
+</style>
+<script>
+    document.write('<meta name="viewport" content="width=device-width,user-scalable=no" />')
+    var fz = document.documentElement.clientWidth / 10;
+    
+    document.getElementsByTagName('html')[0].style.fontSize = fz + 'px';
+    
+    document.addEventListener('touchstart',function(ev){
+        ev.preventDefault();
+    },{passive:false});
+</script>
+
+<script src="js/iscroll.js" > </script>
+
+</head>
+
+<body>
+<p>&gt;&gt;&nbsp;Slide To Unlock</p>
+
+<div id="box">
+	
+	<ul id="list" >
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+	<div class="aaa">
+		
+	</div>
+	<div class="a123">
+		
+	</div>
+	
+</div>
+
+<script src="js/tools.js" >  </script>
+<script>
+
+var list = document.getElementById("list");
+
+var mscroll = new IScroll("#box",{
+	
+	scrollbars: true,
+	scrollbars: "custom",
+	interactiveScrollbars:true,
+	fadeScrollbars:true
+	
+});
+
+mscroll.on("scroll",function(){
+	
+	console.log(1);
+	
+})
+
+//var data = [{},{},{}];
+////	var c = 1;
+//	function fn(){
+//		var a = 0;
+//		var obj = {};
+//		console.log(c);
+//		function fn2(){
+//			var b = 10;
+//			console.log(c);
+//		}
+//		
+//		console.dir(fn2);
+//		
+//	}
+////	
+////	fn();
+////	
+////	console.dir(fn);
+//
+//	var tools =  new tools(6,6);
+//	
+////	console.log( tools.findData() );
+//	
+//	var arr1 = [1,2,3,4,5,6,7,9,4];
+//	
+//	var arr2 = [9,8,7,5,4,2,4,1,4,3];
+//	
+//	var arr3 = [3,4,2,6,2,5,8,5];
+//	
+//	var arr = [...arr1,...arr2,...arr3].sort();
+//	
+//	
+//	console.log( arr );
+
+// ---------------------------------
+
+//var arr = [{a:1},{b:1,c:2,x:8},{d:1,a:3},{a:1,b:2,c:3,D:4}];
+//
+//for (var i = 0; i < arr.length; i++) {
+//	
+//	var length = 0;
+//	
+//	for (attr in arr[i] ) {
+//		
+//		length++;
+//	}
+//	
+//	arr[i].length = length;
+//
+//}
+//
+//arr.sort(function(a,b){
+//	
+//	return a.length - b.length 
+//})
+//
+//console.log( arr );
+
+//---------------------------------------------------
+//var arr = [1,2,3,4];
+//
+//var arr1 = arr.map(function( value,index ){
+//  
+//  return function(){
+//      
+//      alert(value);
+//      
+//  }
+//  
+//})
+//
+//console.log( arr1[0]);
+
+//-------------------------------------------------------------
+
+//function Foo() {
+//  getName = function () { alert (1); };
+//  return this;
+//}
+//Foo.getName = function () { alert (2);};
+//Foo.prototype.getName = function () { alert (3);};
+//var getName = function () { alert (4);};
+//function getName() { alert (5);}
+//
+////请写出以下输出结果：
+//Foo.getName();  // 2
+//getName();  // 4
+//Foo().getName(); // 1
+//getName();  // 1
+//new Foo.getName(); // 2
+//new Foo().getName(); //3
+//new new Foo().getName();  //3
+
+//
+//if (!("a" in window)) {  
+//
+//  var a = 1;
+//}
+//
+//
+//alert(a);   // 1
+
+
+</script>
+
+
+</body>
+</html>
